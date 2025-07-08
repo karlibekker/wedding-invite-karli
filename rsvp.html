@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitation with RSVP</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    #rsvp {
+      display: none; /* hidden by default */
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    #rsvp input, #rsvp select, #rsvp button {
+      width: 300px;
+      max-width: 100%;
+      margin: 5px 0;
+      padding: 10px;
+      background: #222;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+    #open-rsvp, #close-rsvp {
+      cursor: pointer;
+      padding: 10px 20px;
+      background-color: #444;
+      border: none;
+      color: white;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Our Wedding Invitation</h1>
+  <p>Please join us to celebrate!</p>
+
+  <button id="open-rsvp">RSVP</button>
+
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <form id="rsvp-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <select required>
+        <option value="">Will you attend?</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <button id="close-rsvp">Close</button>
+  </section>
+
+  <script>
+    const openBtn =
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karli en Walden se Troue</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+
+<section class="hero" style="position: relative; text-align: center;">
+    <img src="images/photo1.jpg" alt="Karli & Walden" class="hero-img" style="width: 100%; height: 1300px; object-fit: cover; display: block;">
+    <div class="hero-text" style="position: absolute; left: 0; right: 0; top: 62%; transform: translateY(-50%); font-family: 'Cinzel', serif; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.45);">
+        <h1 style="font-size: 3.2rem; font-family: 'Cinzel', serif; font-weight: 700; margin: 0;">Karli & Walden</h1>
+    </div>
+</section>
+
+
+<main>
+    <section id="details" class="content-section">
+        <h2>Jy word hartlik uitgenooi</h2>
+        <p>Kom geniet die aand saam met ons op <strong>20 Desember 2025</strong></p>
+        <div id="date-time" class="fade-in" style="display: flex; align-items: center; gap: 32px; flex-direction: row; justify-content: center;">
+            <div class="date-photo" style="flex-shrink: 0; order: 1;">
+                <img src="images/photo2.jpg" alt="Karli and Walden" style="max-width: 260px; height: auto; border-radius: 0;">
+            </div>
+            <div class="date-details" style="flex: 1; order: 2; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; text-align: left;">
+                <h3 style="width: 100%; text-align: left;">DATUM + TYD</h3>
+                <p class="date" style="width: 100%; text-align: left;">20 . 12 . 2025</p>
+                <p class="time" style="width: 100%; text-align: left;"></p> 15:30 vir 16:00</p>
+                <div id="countdown" class="styled-countdown" style="width: 100%; text-align: left;"></div>
+                <hr style="width: 100%;">
+                <h4 style="width: 100%; text-align: left;">THE GARDEN PLACE</h4>
+                <p class="venue" style="width: 100%; text-align: left;">Wedding Venue</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="our-story" class="content-section story-section fade-in">
+        <div class="story-container" style="display: flex; align-items: center; gap: 32px; flex-direction: row;">
+            <div class="story-text" style="flex: 1; order: 1; position: relative; text-align: left;">
+                <h2 style="position: absolute; top: -2.5em; left: 0; right: auto; margin: 0; text-align: left;">Ons Storie</h2>
+                <p style="text-align: left;">Ons verhaal het begin as ’n sagte fluistering in die wind – ’n toevallige ontmoeting wat subtiel in iets besonders ontvou het. Elke glimlag, elke avontuur en elke gekoesterde oomblik het ons nader aan mekaar gebring, en saam het ons ’n pad van liefde en vertroue gestap. Ons nooi jou met opregte vreugde om hierdie dag van liefde, vreugde en ewige beloftes saam met ons te vier.</p>
+                <p style="text-align: left;"><strong>Met liefde,</strong><br>Karli & Walden</p>
+            </div>
+            <div class="story-image" style="flex-shrink: 0; order: 2;">
+                <img src="images/photo3.jpg" alt="Ons Storie" style="border-radius: 0; border: 2px solid #333;">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="content-section fade-in">
+        <h2>Ons Foto's</h2>
+        <div class="gallery-grid" style="display: flex; gap: 16px; justify-content: center;">
+            <img src="images/photo1.jpg" alt="Couple 1" style="width: 220px; height: 300px; object-fit: cover; border: 2px solid #333; border-radius: 0;">
+            <img src="images/photo2.jpg" alt="Couple 2" style="width: 220px; height: 300px; object-fit: cover; border: 2px solid #333; border-radius: 0;">
+            <img src="images/photo3.jpg" alt="Couple 3" style="width: 220px; height: 300px; object-fit: cover; border: 2px solid #333; border-radius: 0;">
+            <img src="images/photo4.jpg" alt="Couple 4" style="width: 220px; height: 300px; object-fit: cover; border: 2px solid #333; border-radius: 0;">
+            <img src="images/photo5.jpg" alt="Couple 5" style="width: 220px; height: 300px; object-fit: cover; border: 2px solid #333; border-radius: 0;">
+        </div>
+    </section>
+
+    <section id="rsvp" class="content-section fade-in">
+      <h2>RSVP</h2>
+      <form id="rsvp-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <select required>
+          <option value="">Will you attend?</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Ons kan nie wag om ons spesiale dag saam met julle te vier nie!</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          appearOnScroll.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
+
